@@ -65,6 +65,9 @@
     },
     {
       "name" : "minimal"
+    },
+    {
+      "name" : "iCE40HX1K"
     }
   ]
 }
