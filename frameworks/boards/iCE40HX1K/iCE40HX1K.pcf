@@ -1,0 +1,30 @@
+# ----------------------------------------------------------------------------
+#
+# Icebreaker constraint file (.pcf)
+# Pinout:
+# https://github.com/icebreaker-fpga/icebreaker/blob/master/img/icebreaker-v1_0b-legend.jpg
+# Link
+# https://1bitsquared.com/collections/fpga/products/icebreaker
+#
+# ----------------------------------------------------------------------------
+
+# -------------------------- SYSTEM CLOCK ------------------------------------
+set_io -nowarn CLK 15
+
+
+# ------------------------- LEDs and Button ----------------------------------
+set_io -nowarn BTN1     41
+set_io -nowarn BTN2     42
+set_io -nowarn LED1     40
+set_io -nowarn LED2     51
+
+
+set_io DAC_DATA[0] 1
+set_io DAC_DATA[1] 2
+set_io DAC_DATA[2] 3
+set_io DAC_DATA[3] 4
+set_io DAC_DATA[4] 7
+set_io DAC_DATA[5] 8
+set_io DAC_DATA[6] 9
+set_io DAC_DATA[7] 10
+set_io DAC_CLK 20

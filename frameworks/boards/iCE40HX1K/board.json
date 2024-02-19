@@ -1,0 +1,34 @@
+{
+  "name": "iCE40HX1K",
+  "variants": [
+    {
+      "name"      : "configurable",
+      "framework" : "iCE40HX1K.v",
+      "pins"      : [
+      ],
+      "builders": [
+        {
+          "builder" : "edalize",
+          "description": "Build using Edalize",
+          "tool": "icestorm",
+          "tool_options": [
+            {
+                "icepack_options": ["-s"],
+                "yosys_synth_options": ["-top top"],
+                "nextpnr_options": ["--hx1k", "--package vq100"],
+                "pnr": "next"
+            }
+          ],
+          "bitstream"  : "build.bin",
+          "constraints": [{"name": "iCE40HX1K.pcf", "file_type": "PCF"}],
+          "program": [{"cmd" : "sudo iceprogduino", "args" : "build.bin"}]
+        },
+        {
+          "builder" : "shell",
+          "command" : "iCE40HX1K.sh",
+          "description": "Custom shell scripts using yosys and nextpnr"
+        }
+      ]
+    }
+  ]
+}
